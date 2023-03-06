@@ -44,3 +44,34 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+###########
+
+<!-- useReducer --> alternative of creating multiple useState()
+
+take 3 arg and return two value (3rd arg is optional)
+const [state, dispatch] = useReducer(reducer, initialState)
+
+initialState : your all state initial value
+reducer: a function which handle dispatch action for your state update -> function reducer(state, action){}
+
+state : for access your all define state
+dispatch: a function which call reducer for witch state need to be update.
+
+flow--
+when you called dispatch than reducer function automatically called.
+dispatch()
+|\_reducer(state, action){
+match action.type
+|\_update define state
+}
+
+<!--
+simple language
+useState ma jem state ne default value apvaye te initialState ma apvani
+state je define karvi te reducer function ma karvan
+setState karvi te dispatch function thi karvanu      -->
+
+<!--
+const [state,                     setSate]   =  useState("value")
+        |_reducer(action.type)     |_dispatch            |_initialState -->
